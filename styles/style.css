@@ -116,7 +116,7 @@
 
 .card-item {
   border: 2px solid var(--accent-color);
-  margin-bottom: 51px;
+  margin-bottom: 52px;
   background-color: var(--background-color);
 }
 
@@ -178,16 +178,16 @@
 .card-buttons {
   display: flex;
   justify-content: flex-end;
-  padding: 25px 23px 20px 0px;
+  padding: 25px 23px 22px 0px;
   align-items: center;
 }
 
 .card__icon-button {
-  padding-left: 20px;
   display: flex;
   background: transparent;
   border: none;
   align-items: center;
+  border: 2px solid transparent;
 }
 
 .card__like-button {
@@ -243,10 +243,6 @@
 
 /*Состояние сердца*/
 
-.card__icon-button {
-  border: 2px solid transparent;
-}
-
 .card__icon-button:focus {
   outline: none;
 }
@@ -279,7 +275,7 @@
 }
 
 .like-icon:hover .core {
-  fill: var(--accent-color); 
+  fill: var(--accent-color);
 }
 
 .like-icon:not(:hover) .core {
@@ -296,7 +292,7 @@
 }
 
 .like-icon:active .core {
-  fill: var(--color-sparks); 
+  fill: var(--color-sparks);
 }
 
 .like-icon:active .main-body {
@@ -305,7 +301,7 @@
 }
 
 .like-icon.is-liked .core {
-  fill: var(--color-sparks); 
+  fill: var(--color-sparks);
 }
 
 .like-icon.is-liked .main-body {
@@ -316,7 +312,7 @@
 .like-icon.is-liked .contour {
   transition-delay: 0.06s;
   transition: 0.3s;
-  fill: var(--color-sparks); 
+  fill: var(--color-sparks);
 }
 
 .like-icon.is-liked {
@@ -349,7 +345,7 @@
   filter: blur(0.3rem);
 }
 
-.opacity{
+.opacity {
   filter: opacity(0.4);
 }
 
@@ -367,8 +363,9 @@
 
 /*Подвал*/
 
-.footer .card-like__button {
+.footer .card__like-button {
   width: 335px;
+  height: 51px;
   padding: 15px 0 15px 0;
   display: flex;
   justify-content: center;
@@ -381,6 +378,37 @@
   background: var(--background-color);
 }
 
+.dialog {
+  padding: 30px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.dialog-conteoner {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.dialog .icon-m {
+  width: 40px;
+  height: 40px;
+}
+
+.dialog .card__like-button {
+  width: 293px;
+  height: 38px;
+}
+
+.dialog::backdrop {
+  background-color: black;
+  filter: opacity(0.75);
+} 
 /*Мобильная верстка*/
 
 @media (width <= 375px) {
@@ -444,8 +472,9 @@
   margin-top: 50px;
 }
 
-.footer .card-like__button {
+.footer .card__like-button {
     width: 302px;
+    height: 80px;
     display: flex;
     flex-direction: column;
   }
