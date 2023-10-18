@@ -1,3 +1,4 @@
+/* Общие стили для страницы */
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -12,6 +13,8 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
+/* Контейнер */
 
 .width-content {
   width: var(--size-content);
@@ -28,13 +31,14 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   text-transform: uppercase;
   border: 2px solid var(--accent-color);
 }
 
 .header__title {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  text-decoration: none;
 }
 
 .header__sub-title {
@@ -120,11 +124,23 @@
   background-color: var(--background-color);
 }
 
+.card-itrm__title {
+  height: 31px;
+  padding: 5px 24px 3px 10px;
+  font-size: 18px;
+  font-weight: var(--thickness-title-card);
+}
+
 .card-item__img {
   position: relative;
   max-block-size: 696px;
   border-top: 2px solid var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
+}
+
+.item__img {
+  width: 100%;
+  height: 100%;
 }
 
 .card-item__label {
@@ -136,7 +152,7 @@
   background-blend-mode: hard-light;
   font-size: 14px;
   text-transform: uppercase;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   text-shadow: 0 0 0.4px var(--background-color);
   opacity: 0.5;
   z-index: 2;
@@ -148,19 +164,6 @@
       -webkit-text-stroke: 0.4px var(--background-color);
       text-shadow: none;
   }
-}
-
-.card-itrm__title {
-  height: 31px;
-  padding: 5px 24px 3px 10px;
-  font-size: 18px;
-  font-weight: var(--thickness-title-card);
-}
-
-
-.item__img {
-  width: 100%;
-  height: 100%;
 }
 
 .card-item__text {
@@ -180,12 +183,13 @@
   justify-content: flex-end;
   padding: 25px 23px 22px 0px;
   align-items: center;
+  gap: 6px;
 }
 
 .card__icon-button {
+  padding: 0.5px 0;
   display: flex;
   background: transparent;
-  border: none;
   align-items: center;
   border: 2px solid transparent;
 }
@@ -195,7 +199,7 @@
   height: 38px;
   padding: 9px 17px;
   border: 2px solid var(--accent-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;;
   font-size: 14px;
   background: transparent;
   text-align: center;
@@ -373,17 +377,17 @@
   gap: 8px;
   margin-bottom: 105px;
   border: 2px solid var(--accent-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   background: var(--background-color);
 }
 
-.dialog {
+.dialog[open]  {
   padding: 30px;
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
   color: var(--accent-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
@@ -403,6 +407,7 @@
 .dialog .card__like-button {
   width: 293px;
   height: 38px;
+  text-transform: uppercase;
 }
 
 .dialog::backdrop {
@@ -411,7 +416,7 @@
 } 
 /*Мобильная верстка*/
 
-@media (width <= 375px) {
+@media (max-width: 702px) {
 
   .width-content {
     inline-size: 100%;
@@ -423,10 +428,6 @@
     padding: 120px 14px 25px 14px;
   }
 
-  .theme-menu__button:disabled::before {
-    left: -5;
-  }
-
   .theme-menu__item {
     padding-left: 19px;
   }
@@ -434,7 +435,7 @@
   .card-items {
     display: flex;
     flex-direction: column;
-    gap: 49px;
+    gap: 52px;
   }
 
   .card-item {
@@ -450,32 +451,29 @@
     padding: 4px 10px 6px 10px;
   }
 
-  .card-item__img {
-    width: 373px;
-    height: 375px;
-  }
 
   .card-item__text {
-    padding: 25px 25px 27px 25px;
+    padding: 22px 25px 27px 25px;
   }
 
   .card-buttons {
     padding: 24px 25px 23px 0;
   }
 
-  .icon-m {
-    width: 28px;
-    height: 28px;
-  }
+.footer  {
+  margin-top: 51px;
+}
 
-.footer {
-  margin-top: 50px;
+.icon-m {
+  width: 28px;
+  height: 28px;
 }
 
 .footer .card__like-button {
-    width: 302px;
-    height: 80px;
-    display: flex;
-    flex-direction: column;
+  width: 308px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   }
 }
+

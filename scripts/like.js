@@ -48,7 +48,3 @@ function setButtonText(heart, button) {
   showDialogBtn.addEventListener('click', () => {
     myDialog.showModal();
   });
-
-  closeDialogBtn.addEventListener('click', () => {
-    myDialog.close();
-  });
