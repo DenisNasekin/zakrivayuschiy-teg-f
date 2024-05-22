@@ -1,6 +1,19 @@
-# zakrivayuschiy-teg-f
-Проект "Закрывающий тег"
-https://github.com/DenisNasekin/zakrivayuschiy-teg-f
-https://denisnasekin.github.io/zakrivayuschiy-teg-f/
+![image](https://github.com/DenisNasekin/zakrivayuschiy-teg-f/assets/140427738/7b39398e-029d-4690-80ee-81c00c4083c9)
 
+# Проектная работа zakrivayuschiy-teg
+Проект выполнен в рамках учебного курса "Фронтенд разработчик" Яндекс.Практикума<br>
+Макет Figma можно посмотреть <a href = "https://www.figma.com/design/JQhPLs2COLIeZtAtlsBS34/%238-%3C%2F%D0%B7%D0%B0%D0%BA%D1%80%D1%8B%D0%B2%D0%B0%D1%8E%D1%89%D0%B8%D0%B9-%D1%82%D0%B5%D0%B3%3E?node-id=0-1&t=zXrf8ggMvQvRFdLC-0">здесь</a> <br>
+Готовый проект можно посмотреть <a href = "https://denisnasekin.github.io/zakrivayuschiy-teg-f/">здесь</a> <br>
 
+## Задача проекта
+Сверстать адаптивный сайт в светлой и тёмной темах согласно макета в фигме. Настроить анамацию.
+
+## Технологии
+- HTML
+- CSS
+- JavaScript
+
+## Функциональность 
+- Цветовая схема переключается по нажатию на кнопку в шапке сайта
+- По нажатию на иконку сердца и кнопку в карточке работает анимация и меняется внешний вид компонента
+- По нажатию на нижнюю кнопку открывается модальное окно
